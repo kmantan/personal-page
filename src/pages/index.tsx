@@ -20,10 +20,10 @@ export default function Home() {
       </Head>
       <div>
       <NavBar currentView={currentView} setCurrent={setCurrent}/>
-      {currentView === 'Main' ? <Main /> : null}
-      {currentView === 'About' ? <About /> : null}
-      {currentView === 'Contact' ? <Contact /> : null}
-      {currentView === 'Work' ? <Work /> : null}
+      {currentView === 'Main' ? <Main currentView={currentView}/> : null}
+      {currentView === 'About' ? <About currentView={currentView}/> : null}
+      {currentView === 'Contact' ? <Contact currentView={currentView}/> : null}
+      {currentView === 'Work' ? <Work currentView={currentView}/> : null}
       </div>
     </>
   )
