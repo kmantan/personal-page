@@ -7,10 +7,9 @@ import Work from './content/work';
 import LogoIntro from './content/intro';
 import NavBar from './content/navBar';
 
-
 export default function Home() {
-  const [hasRun, setIntro] = useState(true);
-  const [currentView, setCurrent] = useState('Main');
+  // const [hasRun, setIntro] = useState(true);
+  const [currentView, setCurrent] = useState<string>("Main");
 
   return (
     <>
@@ -20,10 +19,10 @@ export default function Home() {
       </Head>
       <div>
       <NavBar currentView={currentView} setCurrent={setCurrent}/>
-      {currentView === 'Main' ? <Main currentView={currentView}/> : null}
-      {currentView === 'About' ? <About currentView={currentView}/> : null}
-      {currentView === 'Contact' ? <Contact currentView={currentView}/> : null}
-      {currentView === 'Work' ? <Work currentView={currentView}/> : null}
+      {currentView === 'Main' ? <Main /> : null}
+      {currentView === 'About' ? <About /> : null}
+      {currentView === 'Contact' ? <Contact /> : null}
+      {currentView === 'Work' ? <Work /> : null}
       </div>
     </>
   )

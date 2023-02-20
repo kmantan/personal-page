@@ -1,6 +1,11 @@
 import { useState } from "react";
 
-export default function NavBar ( {currentView, setCurrent} ) {
+type ViewProps = {
+  currentView: String,
+  setCurrent: Function
+}
+
+export default function NavBar ( {currentView, setCurrent} : ViewProps ) {
 
   return (
     <div className="h-1/4 w-full flex flex-row content-center justify-center">

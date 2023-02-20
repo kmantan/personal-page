@@ -1,5 +1,5 @@
 import { useState } from "react";
 
-export default function LogoIntro( {size, hasRun, setIntro} ) {
+export default function LogoIntro() {
   let [number, increaseNumber] = useState(0);
 };

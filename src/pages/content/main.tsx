@@ -1,9 +1,9 @@
 import { useState } from "react";
 
-export default function Main( {hasRun, setIntro} ){
+export default function Main(){
   return (
     <div className="m-10">
-      <h1 className="text-4xl text-center m-10">Welcome to Keenan's Page</h1>
+      <h1 className="text-4xl text-center m-10">Welcome to Keenan&apos;s Page</h1>
       <p>
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam enim justo, finibus vitae neque quis, varius fermentum lorem. Curabitur varius nisi dolor, ac ultricies lacus rhoncus vel. Proin varius quam nec elit finibus accumsan. Donec in ante placerat, fringilla mi et, euismod lectus. In at enim nec elit fermentum pretium. Pellentesque et elit semper, volutpat felis quis, facilisis quam. Duis ac auctor magna, sed egestas dui. Donec est justo, vulputate at ornare eget, tristique ut massa. Etiam rhoncus arcu ut augue tincidunt convallis. Proin consectetur ultricies turpis pretium venenatis. Sed eget elit quis justo interdum iaculis non eu sem.
 

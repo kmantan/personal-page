@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function About( {} ){
+export default function About(){
   return (
     <div className="m-10">
       <h1 className="text-4xl text-center m-10">About Keenan</h1>

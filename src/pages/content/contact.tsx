@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Contact( {hasRun, setIntro} ){
+export default function Contact(){
   return (
     <div className="m-10">
       <h1 className="text-4xl text-center m-10">Here Is How To Contact Me</h1>

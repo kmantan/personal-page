@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Work( {hasRun, setIntro} ){
+export default function Work(){
   return (
     <div className="m-10">
       <h1 className="text-4xl text-center m-10">Here Are My Projects</h1>
