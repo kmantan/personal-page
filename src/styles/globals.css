@@ -117,3 +117,38 @@ a {
 .navButton:hover {
  color: rgb(37 99 235);
 }
+
+section {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  scroll-snap-align: start;
+  margin: 0;
+  padding: 0;
+}
+
+h2 {
+  font-size: 300%;
+  text-shadow: 1px 1px 4px black;
+}
+
+.work {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.poke {
+  background-color: red;
+}
+
+.health {
+  background-color: lightblue;
+}
+
+.atelier {
+  background-color: lightgreen;
+}
