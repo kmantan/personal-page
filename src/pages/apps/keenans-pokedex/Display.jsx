@@ -1,11 +1,18 @@
 import React from 'react';
+import Image from 'next/image'
 
 export default function Display({currentPokemon}) {
-  let image = currentPokemon.sprites.front_default;
+  currentPokemon = currentPokemon || {
+    sprites: {
+      "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
+    }
+  };
+
+  let image = currentPokemon.sprites.front_default || "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png";
 
   if(image){
     return (
-     <img src={image}></img>
+     <Image src={image} alt="" width={100} height={100}></Image>
     )
   } else {
     return null;
