@@ -1,13 +1,37 @@
 import React from "react";
 import Search from './Search.jsx'
+import Display from './Display.jsx'
 
 
 class KeenansPokedex extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      currentPokemon: {
+        sprites: {
+          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
+        }
+      }
+    };
+    this.updatePokemon = this.updatePokemon.bind(this);
+  }
+
+  updatePokemon(pokemon) {
+    fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
+    .then(res => res.json())
+    .then(pokemonInfo => {
+      this.setState({currentPokemon: pokemonInfo});
+      console.log(Object.keys(this.state.currentPokemon));
+    })
+  }
+
   render() {
     return (
       <>
       <h2 className="h-1/6 flex items-center justify-center w-full">Welcome to Keenans Pokedex</h2>
-    <Search className="h-5/6"/>
+    <Search updatePokemon={this.updatePokemon} className="h-5/6"/>
+    <Display currentPokemon={this.state.currentPokemon}/>
       </>
     );
   }
