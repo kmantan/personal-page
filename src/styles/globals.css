@@ -123,7 +123,6 @@ section {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
   scroll-snap-align: start;
   margin: 0;
@@ -139,6 +138,7 @@ h2 {
   scroll-snap-type: y mandatory;
   overflow-y: scroll;
   height: 100vh;
+  scroll-behavior: smooth;
 }
 
 .poke {

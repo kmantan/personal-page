@@ -1,11 +1,11 @@
 import { useState } from "react";
+import Pokedex from "../apps/keenans-pokedex/Pokedex.jsx";
 
 export default function Work(){
   return (
     <div className="work">
       <section className="poke">
-        <h2>Pokedex</h2>
-        <p>Here is the Pokedex app I made</p>
+        <Pokedex />
       </section>
       <section className="atelier">
         <h2>Atelier</h2>
