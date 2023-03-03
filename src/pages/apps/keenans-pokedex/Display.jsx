@@ -1,18 +1,27 @@
 import React from 'react';
 import Image from 'next/image'
+import Ditto from './DefaultPokemon.jsx';
+import TypeDisplay from './TypeDisplay.jsx';
 
 export default function Display({currentPokemon}) {
-  currentPokemon = currentPokemon || {
-    sprites: {
-      "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
-    }
-  };
+  currentPokemon = currentPokemon || Ditto;
 
   let image = currentPokemon.sprites.front_default || "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png";
 
   if(image){
     return (
-     <Image src={image} alt="" width={100} height={100}></Image>
+      <div className="flex flex-col items-center">
+        <h3>{currentPokemon.name[0].toUpperCase() + currentPokemon.name.slice(1,currentPokemon.name.length)}</h3>
+        <Image src={image} alt="" width={100} height={100}></Image>
+        <div className="flex flex-col">
+          <p>Pokemon ID # {currentPokemon.id}</p>
+          <p>Weight: {currentPokemon.weight}</p>
+          <p>Height: {currentPokemon.height}</p>
+          <p>{currentPokemon.types.length > 1 ? 'Types: ' : 'Type: '}
+          <TypeDisplay pokemon={currentPokemon}/>
+          </p>
+        </div>
+      </div>
     )
   } else {
     return null;

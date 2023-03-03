@@ -1,6 +1,7 @@
 import React from "react";
-import Search from './Search.jsx'
-import Display from './Display.jsx'
+import Search from './Search.jsx';
+import Display from './Display.jsx';
+import Ditto from './DefaultPokemon.jsx';
 
 
 class KeenansPokedex extends React.Component {
@@ -8,11 +9,7 @@ class KeenansPokedex extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentPokemon: {
-        sprites: {
-          "front_default": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png"
-        }
-      }
+      currentPokemon: Ditto
     };
     this.updatePokemon = this.updatePokemon.bind(this);
   }
