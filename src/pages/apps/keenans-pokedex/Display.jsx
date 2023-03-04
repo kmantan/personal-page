@@ -12,7 +12,7 @@ export default function Display({currentPokemon}) {
     return (
       <div className="flex flex-col items-center">
         <h3>{currentPokemon.name[0].toUpperCase() + currentPokemon.name.slice(1,currentPokemon.name.length)}</h3>
-        <Image src={image} alt="" width={100} height={100}></Image>
+        <Image className="pokemon" src={image} alt="" width={100} height={100}></Image>
         <div className="flex flex-col">
           <p>Pokemon ID # {currentPokemon.id}</p>
           <p>Weight: {currentPokemon.weight}</p>
