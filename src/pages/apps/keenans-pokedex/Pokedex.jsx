@@ -1,7 +1,7 @@
 import React from "react";
 import Search from './Search.jsx';
 import Display from './Display.jsx';
-import Ditto from './DefaultPokemon.jsx';
+import Ditto from './../../../DefaultPokemon.js';
 
 
 class KeenansPokedex extends React.Component {

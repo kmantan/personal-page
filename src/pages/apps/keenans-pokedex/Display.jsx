@@ -1,12 +1,12 @@
 import React from 'react';
 import Image from 'next/image'
-import Ditto from './DefaultPokemon.jsx';
+import Ditto from './../../../DefaultPokemon.js';
 import TypeDisplay from './TypeDisplay.jsx';
 
 export default function Display({currentPokemon}) {
   currentPokemon = currentPokemon || Ditto;
 
-  let image = currentPokemon.sprites.front_default || "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/25.png";
+  let image = currentPokemon.sprites.front_default;
 
   if(image){
     return (
