@@ -15,8 +15,8 @@ export default function Display({currentPokemon}) {
         <Image className="pokemon" src={image} alt="" width={150} height={150}></Image>
         <div className="flex flex-col">
           <p>Pokemon ID # {currentPokemon.id}</p>
-          <p>Weight: {currentPokemon.weight}</p>
-          <p>Height: {currentPokemon.height}</p>
+          <p>Weight: {Math.round(currentPokemon.weight / 4.535923)}lbs</p>
+          <p>Height: {currentPokemon.height}0cm</p>
           <p>{currentPokemon.types.length > 1 ? 'Types: ' : 'Type: '}
           <TypeDisplay pokemon={currentPokemon}/>
           </p>

@@ -1,19 +1,21 @@
 import { useState } from "react";
+import Image from 'next/image';
 
 export default function About(){
   return (
     <div className="m-10">
       <h1 className="text-4xl text-center m-10">About Keenan</h1>
-      <p>
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam enim justo, finibus vitae neque quis, varius fermentum lorem. Curabitur varius nisi dolor, ac ultricies lacus rhoncus vel. Proin varius quam nec elit finibus accumsan. Donec in ante placerat, fringilla mi et, euismod lectus. In at enim nec elit fermentum pretium. Pellentesque et elit semper, volutpat felis quis, facilisis quam. Duis ac auctor magna, sed egestas dui. Donec est justo, vulputate at ornare eget, tristique ut massa. Etiam rhoncus arcu ut augue tincidunt convallis. Proin consectetur ultricies turpis pretium venenatis. Sed eget elit quis justo interdum iaculis non eu sem.
+      <div className="flex items-center justify-center">
+      {/* <Image src="/FA65480B-2C5D-4080-B375-C73B7B2E2547_4_5005_c.jpeg" alt="" width={300} height={300}/> */}
+      </div>
+      <p>I am a passionate problem solver. Self starter and team player that wants to bring the best out of everyone and myself. Tackling simple and complex issues brings me fulfillment. I love learning plain and simple.</p><br></br>
 
-Aenean sollicitudin mi metus. Etiam eu lacus nisi. Duis feugiat efficitur sem id tempus. Ut et sem id velit mattis laoreet ultricies sit amet lacus. Pellentesque dolor lorem, porttitor in finibus et, varius in orci. Fusce in erat in nunc facilisis pellentesque. Vivamus vitae velit quis orci aliquam tincidunt vel venenatis ex. Pellentesque sit amet hendrerit eros.
+<p>I am a software engineer that always looks at the big picture and imagines what is possible. Seeing ideas through and creating with others is the best feeling. I want to meaningfully contribute to a team and give my best.</p><br></br>
 
-Mauris sed posuere lectus, a auctor leo. Praesent eget bibendum turpis, vitae congue turpis. Maecenas pellentesque, mi id ullamcorper feugiat, dolor lorem sodales lectus, id hendrerit turpis sapien a nunc. Morbi sed lectus nulla. Nullam mauris tellus, sodales eu diam vel, tincidunt tincidunt leo. Praesent convallis eu magna in ornare. Integer at purus quis justo cursus eleifend sit amet a leo. Phasellus eleifend vehicula neque, a egestas velit sagittis id. In in augue vel arcu efficitur convallis sed nec massa. Aliquam tincidunt sollicitudin venenatis. Nunc vitae nisi eget arcu blandit bibendum. Proin sed turpis dui. Aliquam dictum lacus ac felis consectetur finibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed mattis ac diam vitae bibendum. Cras mattis orci at nibh feugiat, sit amet placerat leo lobortis.
+<p>I am a thoughtful person that lives to make others happy and keep the vibes up. Willing to go the extra mile and then some. As a call center coordinator I am required to ensure quality and implement solutions to ever-changing issues whether it be customer or operation related.
 
-Curabitur et fringilla neque. Aliquam diam ligula, vestibulum vel aliquet lobortis, fringilla vitae lorem. Proin lacinia libero eu nunc tempus, ac ultrices nisl sagittis. Phasellus gravida eros arcu, sodales fringilla erat laoreet id. Donec placerat, dui nec cursus dictum, nisi orci facilisis enim, laoreet pretium nunc purus id nunc. Nunc malesuada neque vitae nunc pellentesque, ac malesuada mi rutrum. Maecenas tempor, tortor at commodo dictum, dui magna sollicitudin odio, non mattis eros arcu a nibh. Praesent at ultricies dui. Nam imperdiet elementum neque, interdum lobortis nisl ullamcorper vel. Integer placerat dui non fermentum sollicitudin. Aenean eu lorem nisi. Sed pulvinar blandit massa id pretium.
+When I have free time you&amps;ll find me with my family. They are the best.
 
-Vivamus vel magna at libero accumsan pretium quis et lorem. In arcu nunc, facilisis in enim sit amet, consequat facilisis odio. Sed pretium, elit eleifend luctus rutrum, augue leo hendrerit lectus, eget blandit risus enim eu lorem. Vivamus dignissim leo et molestie pretium. Aenean ullamcorper non ex id semper. Nullam laoreet consectetur magna, ac placerat ex. Cras accumsan elit felis, ac pellentesque diam viverra nec. Morbi scelerisque tellus quis vestibulum sollicitudin. Nullam condimentum aliquet mauris sit amet faucibus. Phasellus malesuada sem eu convallis vestibulum. Maecenas gravida quam eu congue iaculis.</p>
-    </div>
+Interested in chatting about a job opportunity on your team? Send me an email at kmantan@gmail.com.”</p></div>
   )
 };

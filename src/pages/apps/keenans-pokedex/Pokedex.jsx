@@ -2,6 +2,7 @@ import React from "react";
 import Search from './Search.jsx';
 import Display from './Display.jsx';
 import Ditto from './../../../DefaultPokemon.js';
+import ScrollForMore from './../../../commonFunctionalities/ScrollForMore.jsx';
 
 
 
@@ -26,13 +27,21 @@ class KeenansPokedex extends React.Component {
 
   render() {
     return (
-      <>
-      <h2 className="h-1/6 flex items-center justify-center w-full">Keenan&apos;s Pokedex</h2>
-    <Search updatePokemon={this.updatePokemon} className="h-5/6"/>
-    <Display currentPokemon={this.state.currentPokemon}/>
-      </>
+      <div className="static h-full flex flex-col items-center">
+        <h2 className="h-1/6 flex items-center justify-center w-full">Keenan&apos;s Pokedex</h2>
+        <Search updatePokemon={this.updatePokemon} className="h-5/6"/>
+        <Display currentPokemon={this.state.currentPokemon}/>
+        <div className="absolute bottom-0">
+        <ScrollForMore />
+        </div>
+      </div>
     );
   }
+
+  componentDidMount(){
+    this.updatePokemon('charmander');
+  }
+
 }
 
 export default KeenansPokedex;

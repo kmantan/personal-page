@@ -3,6 +3,7 @@ import gsap from 'gsap';
 
 export default function Search({updatePokemon}) {
   let requestedPokemon;
+  let currentPosition = 0;
 
   return (
     <form>
@@ -13,16 +14,21 @@ export default function Search({updatePokemon}) {
       <input className="bg-blue-400 h-10 w-24 m-4 rounded-full ml-4" type="submit" value="Submit" onClick={(e) => {
         e.preventDefault();
         // gsap.fromTo(".pokemon", {opacity: 0}, {opacity: 1, duration: 4});
-        const animate = () => gsap.fromTo(".pokemon", {
-          x: 0, //normal value
-          y: -10
-      },
-      {
-          x: 0,
+        function animate() {
+          gsap.to(".pokemon", {
+          x: currentPosition - 50, //normal value
           y: 0,
           duration: 0.5
       });
-      setInterval(animate, 750)
+      gsap.to(".pokemon", {
+        x: currentPosition + 50, //normal value
+        y: 0,
+        duration: 0.5
+    });
+    }
+
+
+      setInterval(animate, 1000)
         updatePokemon(requestedPokemon.toLowerCase());
       }}/>
     </form>

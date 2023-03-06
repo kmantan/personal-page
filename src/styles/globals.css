@@ -142,7 +142,8 @@ h2 {
 }
 
 .poke {
-  background-color: red;
+  background-color: rgb(194, 0, 0);
+  height: 100vh;
 }
 
 .health {
@@ -151,4 +152,9 @@ h2 {
 
 .atelier {
   background-color: lightgreen;
+}
+
+.ting {
+  height: 300px;
+  width: 300px;
 }
