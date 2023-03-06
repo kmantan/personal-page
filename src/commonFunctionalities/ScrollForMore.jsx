@@ -1,4 +1,4 @@
-import { SlArrowDown } from 'react-icons/Sl';
+import { SlArrowDown } from 'react-icons/sl';
 import gsap from 'gsap';
 
 const ScrollForMore = () => {
