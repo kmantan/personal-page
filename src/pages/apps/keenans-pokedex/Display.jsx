@@ -17,9 +17,10 @@ export default function Display({currentPokemon}) {
           <p>Pokemon ID # {currentPokemon.id}</p>
           <p>Weight: {Math.round(currentPokemon.weight / 4.535923)}lbs</p>
           <p>Height: {currentPokemon.height}0cm</p>
-          <p>{currentPokemon.types.length > 1 ? 'Types: ' : 'Type: '}
+          <div className="flex flex-row">
+          <p className="mr-2">{currentPokemon.types.length > 1 ? 'Types: ' : 'Type: '}</p>
           <TypeDisplay pokemon={currentPokemon}/>
-          </p>
+          </div>
         </div>
       </div>
     )

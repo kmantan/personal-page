@@ -17,9 +17,9 @@ export default function Home() {
         <title>{`Keenan's Personal Page`}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div>
       <NavBar currentView={currentView} setCurrent={setCurrent}/>
-      {currentView === 'Main' ? <Main /> : null}
+      <div className="flex h-screen items-center justify-center">
+      {currentView === 'Main' ? <Main setCurrent={setCurrent}/> : null}
       {currentView === 'About' ? <About /> : null}
       {currentView === 'Contact' ? <Contact /> : null}
       {currentView === 'Work' ? <Work /> : null}

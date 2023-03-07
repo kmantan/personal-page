@@ -2,12 +2,21 @@ import { useState } from "react";
 import { SiIndeed } from "react-icons/si";
 import { SiGithub } from "react-icons/si";
 
-export default function Main(){
+type MainProps = {
+  setCurrent: Function
+}
+
+export default function Main({setCurrent} : MainProps){
   return (
-    <div className="m-10">
-      <h1 className="text-4xl text-center text-m-10 w-full">
-        {`Hi, I'm Keenan Aldridge`}
-        <p>I am a</p><p className="text-indigo-600 underline underline-offset-8">full-stack</p>
+    <div>
+      <h1 className="text-4xl text-center text-m-10 w-100">
+        {`Hi, I'm Keenan Aldridge.`}
+        <div className="flex flex-row justify-center align-center">
+        <p className="mr-2">I am a</p><p className="text-indigo-600 underline underline-offset-8"
+        onClick={() => {
+          setCurrent('Work');
+        }}>full-stack</p>
+        </div>
         <p>software engineer.</p>
       </h1>
       <div className="flex flex-row justify-center align-center m-4">
