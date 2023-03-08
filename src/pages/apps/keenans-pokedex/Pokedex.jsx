@@ -36,7 +36,7 @@ class KeenansPokedex extends React.Component {
            <MovesDisplay moves={this.state.currentPokemon.moves}/>
           </div>
         </div>
-        <div className="absolute bottom-20 ">
+        <div className="absolute bottom-20">
           <ScrollForMore />
         </div>
       </div>
