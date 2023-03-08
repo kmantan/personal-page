@@ -164,6 +164,7 @@ h2 {
   width: 100wh;
   max-width: 1080px;
   max-height: 1920px;
+  overflow-y: scroll;
   color: black;
 }
 
