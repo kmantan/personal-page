@@ -146,6 +146,10 @@ h2 {
   height: 100vh;
 }
 
+.pokeMoveList {
+  overflow-y: auto;
+}
+
 .health {
   background-color: lightblue;
 }

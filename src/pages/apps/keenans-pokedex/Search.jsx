@@ -16,19 +16,19 @@ export default function Search({updatePokemon}) {
         // gsap.fromTo(".pokemon", {opacity: 0}, {opacity: 1, duration: 4});
         function animate() {
           gsap.to(".pokemon", {
-          x: currentPosition - 50, //normal value
-          y: 0,
+          x: 0, //normal value
+          y: currentPosition - 50,
           duration: 0.5
       });
       gsap.to(".pokemon", {
-        x: currentPosition + 50, //normal value
-        y: 0,
+        x: 0, //normal value
+        y: currentPosition + 0,
         duration: 0.5
     });
     }
 
 
-      setInterval(animate, 1000)
+      setInterval(animate, 2000)
         updatePokemon(requestedPokemon.toLowerCase());
       }}/>
     </form>
