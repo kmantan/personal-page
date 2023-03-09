@@ -3,7 +3,7 @@ import { useState } from "react";
 export default function Resume(){
   return (
     <div className="resume bg-white m-0 h-5/6 w-full">
-      <div className="m-10">
+      <div className="m-10 w-11/12 p-2">
         <h1 className="text-black text-4xl font-bold mb-4">Keenan Aldridge</h1>
         <p>Aiea, Hawaii (Open to Remote) | (404) 576-8138 | kmantan@gmail.com</p>
         <a className="text-black m-0" href="linkedin.com/in/keenanaldridge">linkedin.com/in/keenanaldridge   |</a>
