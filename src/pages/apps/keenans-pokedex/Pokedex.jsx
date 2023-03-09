@@ -27,7 +27,7 @@ class KeenansPokedex extends React.Component {
 
   render() {
     return (
-      <div className="relative h-full flex flex-col items-center">
+      <div className="relative h-full flex flex-col items-center lg:w-1/3">
         <h2 className="h-1/6 flex items-center justify-center w-full">Keenan&apos;s Pokedex</h2>
         <Search updatePokemon={this.updatePokemon} className="h-5/6"/>
         <div className="flex flex-row justify-between w-full">

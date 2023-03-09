@@ -1,6 +1,5 @@
 import { useState } from "react";
-import { SiIndeed } from "react-icons/si";
-import { SiGithub } from "react-icons/si";
+import { SiLinkedin, SiGithub } from "react-icons/si";
 
 type MainProps = {
   setCurrent: Function
@@ -20,7 +19,7 @@ export default function Main({setCurrent} : MainProps){
         <p>software engineer.</p>
       </h1>
       <div className="flex flex-row justify-center align-center m-4">
-        <SiIndeed className="text-3xl m-4 hover:text-blue-400" onClick={() => {
+        <SiLinkedin className="text-3xl m-4 hover:text-blue-400" onClick={() => {
           window.open('https://linkedin.com/in/keenanaldridge/')
         }}/>
         <SiGithub className="text-3xl m-4 hover:text-green-400" onClick={() => {

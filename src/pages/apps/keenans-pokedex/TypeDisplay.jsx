@@ -25,7 +25,8 @@ export default function TypeDisplay({pokemon}){
   if(typeof pokemon === 'object'){
     return pokemon.types.map((pokeType) => {
       const currentType = typeStyling[pokeType.type.name];
-      const classStyling = `${currentType} shadow-lg shadow-${currentType}/40 mr-2 rounded-full pl-2 pr-2`;
+      const shadowType = currentType.slice(3, currentType.length - 4);
+      const classStyling = `${currentType} shadow-lg shadow-${shadowType}-500/50 mr-2 rounded-full pl-2 pr-2`;
       const typeName = pokeType.type.name;
       return (
         <p className={classStyling} key={pokeType.slot}>{(pokeType.type.name[0]).toUpperCase() + (pokeType.type.name).slice(1)}</p>

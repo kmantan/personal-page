@@ -11,7 +11,7 @@ export default function Search({updatePokemon}) {
       <input type="text" name="name" value={requestedPokemon} onChange={(e) => {
         requestedPokemon = e.target.value;
       }}/>
-      <input className="bg-blue-400 h-10 w-24 m-4 rounded-full ml-4" type="submit" value="Submit" onClick={(e) => {
+      <input className="bg-blue-400 shadow-lg shadow-blue-400/50 h-10 w-24 m-4 rounded-full ml-4" type="submit" value="Submit" onClick={(e) => {
         e.preventDefault();
         // gsap.fromTo(".pokemon", {opacity: 0}, {opacity: 1, duration: 4});
         function animate() {
