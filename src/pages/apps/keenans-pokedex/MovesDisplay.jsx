@@ -4,10 +4,10 @@ export default function MovesDisplay({moves}){
   moves = moves || [];
   return (
     <table>
-      <thead>
-        <th>Moves List</th>
-      </thead>
       <tbody>
+      <tr>
+        <th>Moves List</th>
+      </tr>
           {moves.map((move) => {
             const name = move.move.name;
             const formattedName = (name[0]).toUpperCase() + (name).slice(1);

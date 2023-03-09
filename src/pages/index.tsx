@@ -18,7 +18,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavBar currentView={currentView} setCurrent={setCurrent}/>
-      <div className="h-screen w-screen m-0">
+      <div className="h-screen w-screen m-0 flex justify-center">
       {currentView === 'Main' ? <Main setCurrent={setCurrent}/> : null}
       {currentView === 'About' ? <About /> : null}
       {currentView === 'Resume' ? <Resume /> : null}

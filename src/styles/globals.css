@@ -149,6 +149,7 @@ h2 {
 .pokeMoveList {
   overflow-y: auto;
   height: 60vh;
+  padding-right: 4px;
 }
 
 .health {
