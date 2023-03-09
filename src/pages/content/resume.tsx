@@ -2,7 +2,7 @@ import { useState } from "react";
 
 export default function Resume(){
   return (
-    <div className="resume bg-white m-10 h-5/6 w-full">
+    <div className="resume bg-white m-0 h-5/6 w-full">
       <div className="m-10">
         <h1 className="text-black text-4xl font-bold mb-4">Keenan Aldridge</h1>
         <p>Aiea, Hawaii (Open to Remote) | (404) 576-8138 | kmantan@gmail.com</p>

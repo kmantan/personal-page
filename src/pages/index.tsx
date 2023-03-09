@@ -14,11 +14,11 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>{`Keenan's Personal Page`}</title>
+        <title>{`Keenan Aldridge | Full-Stack Software Engineer, Developer, Javascript, React, Coordinator`}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <NavBar currentView={currentView} setCurrent={setCurrent}/>
-      <div className="flex h-screen items-center justify-center">
+      <div className="h-screen w-screen m-0">
       {currentView === 'Main' ? <Main setCurrent={setCurrent}/> : null}
       {currentView === 'About' ? <About /> : null}
       {currentView === 'Resume' ? <Resume /> : null}
