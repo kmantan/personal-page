@@ -4,6 +4,7 @@ import Display from './Display.jsx';
 import Ditto from './../../../DefaultPokemon.js';
 import ScrollForMore from './../../../commonFunctionalities/ScrollForMore.jsx';
 import MovesDisplay from './MovesDisplay.jsx';
+import RecentSearches from './RecentSearches.jsx';
 
 
 
@@ -30,6 +31,7 @@ class KeenansPokedex extends React.Component {
       <div className="relative h-full flex flex-col items-center lg:w-1/3">
         <h2 className="h-1/6 flex items-center justify-center w-full">Keenan&apos;s Pokedex</h2>
         <Search updatePokemon={this.updatePokemon} className="h-5/6"/>
+        {/* <RecentSearches updatePokemon={this.updatePokemon}/> */}
         <div className="flex flex-row justify-between w-full">
           <Display currentPokemon={this.state.currentPokemon}/>
           <div className="pokeMoveList">
