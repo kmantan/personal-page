@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Pokedex from "../apps/keenans-pokedex/Pokedex.jsx";
 import HealthCoach from "../apps/my-health-coach/HealthCoach";
+import Atelier from "../apps/atelier/Atelier";
 
 export default function Work(){
   return (
@@ -12,7 +13,7 @@ export default function Work(){
         <HealthCoach />
       </section>
       <section className="atelier">
-        <h2>Atelier</h2>
+        <Atelier />
       </section>
     </div>
   )
