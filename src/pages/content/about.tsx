@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function About(){
   return (
-    <div className="m-6 flex flex-col items-center">
+    <div className="m-6 flex flex-col items-center h-screen">
       <h1 className="text-4xl mb-4">About Keenan</h1>
       <div className="flex items-center">
       <Image src="/IMG_4074.jpeg" alt="" width={300} height={300} className="p-4 rounded-3xl"/>
