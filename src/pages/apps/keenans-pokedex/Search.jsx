@@ -10,11 +10,11 @@ export default function Search({updatePokemon}) {
   return (
     <form>
       <label className="pr-4">Name:</label>
-      <div className="absolute">
+      <div className="absolute flex flex-col">
         <input type="text" name="name" value={requestedPokemon} onChange={(e) => {
           setRequestedPokemon(e.target.value);
 
-          setSuggested(AllPokemon.filter((search) => {
+          setSuggested(suggested => AllPokemon.filter((search) => {
             if((search.name.english).toLowerCase().includes((e.target.value).toLowerCase())){
               return search.name.english;
             }
@@ -22,16 +22,34 @@ export default function Search({updatePokemon}) {
             return pokemon.name.english;
           }))
         }}/>
-
+        { suggested.length > 0 ?
         <div className="relative h-24 overflow-y-scroll">{
           suggested.map((term) => {
             return <p key={term}
-            onClick={() => {
-              console.log(term);
-              setRequestedPokemon(term);
+            onClick={(e) => {
+              setRequestedPokemon(e.target.innerText);
+              function animate() {
+                gsap.to(".pokemon", {
+                x: 0, //normal value
+                y: currentPosition - 50,
+                duration: 0.5
+            });
+            gsap.to(".pokemon", {
+              x: 0, //normal value
+              y: currentPosition + 0,
+              duration: 0.5
+          });
+          }
+
+            setInterval(animate, 2000)
+              updatePokemon((e.target.innerText).toLowerCase());
+
             }}>{term}</p>
           })
         }</div>
+        : null
+        }
+
       </div>
       <input className="bg-blue-400 shadow-lg shadow-blue-400/50 h-10 w-24 m-4 rounded-full ml-4" type="submit" value="Submit" onClick={(e) => {
         e.preventDefault();
