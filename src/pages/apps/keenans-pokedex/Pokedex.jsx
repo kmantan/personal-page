@@ -1,7 +1,7 @@
 import React from "react";
 import Search from './Search.jsx';
 import Display from './Display.jsx';
-import Ditto from './../../../DefaultPokemon.js';
+import Charmander from './../../../DefaultPokemon.js';
 import ScrollForMore from './../../../commonFunctionalities/ScrollForMore.jsx';
 import MovesDisplay from './MovesDisplay.jsx';
 import RecentSearches from './RecentSearches.jsx';
@@ -13,12 +13,13 @@ class KeenansPokedex extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      currentPokemon: Ditto
+      currentPokemon: Charmander
     };
     this.updatePokemon = this.updatePokemon.bind(this);
   }
 
   updatePokemon(pokemon) {
+    pokemon = pokemon || this.state.currentPokemon;
     fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
     .then(res => res.json())
     .then(pokemonInfo => {
