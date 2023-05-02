@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import gsap from 'gsap';
-import AllPokemon from './AllPokemon.js';
+import AllPokemon from './../../../AllPokemon.js';
 
 export default function Search({updatePokemon}) {
   let [requestedPokemon, setRequestedPokemon] = useState('pikachu');
