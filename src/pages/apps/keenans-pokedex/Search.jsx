@@ -3,7 +3,7 @@ import gsap from 'gsap';
 import AllPokemon from './../../../AllPokemon.js';
 
 export default function Search({updatePokemon}) {
-  let [requestedPokemon, setRequestedPokemon] = useState('pikachu');
+  let [requestedPokemon, setRequestedPokemon] = useState('');
   let [suggested, setSuggested] = useState([]);
   let currentPosition = 0;
 
@@ -21,7 +21,7 @@ export default function Search({updatePokemon}) {
     duration: 0.5
 });
 }
-
+  setRequestedPokemon('');
   setInterval(animate, 2000)
     updatePokemon(newPokemon);
 
@@ -29,9 +29,11 @@ export default function Search({updatePokemon}) {
 
   return (
     <form>
-      <label className="pr-4">Name:</label>
-      <div className="absolute flex flex-col">
-        <input type="text" name="name" value={requestedPokemon} onChange={(e) => {
+      <div className="flex flex-row items-center justify-center">
+        <label className="pr-4">Name:</label>
+        <div className="flex flex-col">
+        <input type="text" name="name" className="max-h-5" placeholder="example: pikachu"
+        value={requestedPokemon} onChange={(e) => {
           setRequestedPokemon(e.target.value);
 
           setSuggested(priorSuggested => AllPokemon.filter((search) => {
@@ -42,23 +44,24 @@ export default function Search({updatePokemon}) {
             return pokemon.name.english;
           }));
         }}/>
-        { requestedPokemon.length > 0 ?
-        <div className="relative h-24 overflow-y-scroll">{
+        {requestedPokemon.length > 0 ?
+        <div className="bg-gray-500 h-24 overflow-y-scroll">{
           suggested.map((term) => {
-            return <p key={term}
+            return <p key={term} className="text-white"
             onClick={(e) => {
               updateSuggested(e.target.innerText.toLowerCase());
             }}>{term}</p>
-          })
-        }</div>
+          })}
+        </div>
         : null
         }
-
-      </div>
-      <input className="bg-blue-400 shadow-lg shadow-blue-400/50 h-10 w-24 m-4 rounded-full ml-4" type="submit" value="Submit" onClick={(e) => {
-        e.preventDefault();
+        </div>
+       <input className="bg-blue-400 shadow-lg shadow-blue-400/50 h-10 w-24 m-4 rounded-full ml-4" type="submit" value="Submit" onClick={(e) => {
+          e.preventDefault();
+          updateSuggested(requestedPokemon.toLowerCase());
         // gsap.fromTo(".pokemon", {opacity: 0}, {opacity: 1, duration: 4});
-      }}/>
+        }}/>
+      </div>
     </form>
   )
 }
