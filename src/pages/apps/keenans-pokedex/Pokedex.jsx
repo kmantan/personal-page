@@ -5,6 +5,7 @@ import Charmander from './../../../DefaultPokemon.js';
 import ScrollForMore from './../../../commonFunctionalities/ScrollForMore.jsx';
 import MovesDisplay from './MovesDisplay.jsx';
 import RecentSearches from './RecentSearches.jsx';
+import AllPokemon from './../../../AllPokemon.js';
 
 
 
@@ -32,10 +33,10 @@ class KeenansPokedex extends React.Component {
       <div className="relative h-full flex flex-col items-center lg:w-1/3">
         <h2 className="h-1/6 flex items-center justify-center w-full"
         onClick={() => window.open("https://github.com/kmantan/keenans-pokedex")}>Keenan&apos;s Pokedex</h2>
-        <Search updatePokemon={this.updatePokemon} className="h-5/6"/>
+        <Search allPokemon={AllPokemon} updatePokemon={this.updatePokemon} className="h-5/6"/>
         {/* <RecentSearches updatePokemon={this.updatePokemon}/> */}
         <div className="flex flex-row justify-between w-full">
-          <Display currentPokemon={this.state.currentPokemon}/>
+          <Display updatePokemon={this.updatePokemon} allPokemon={AllPokemon} currentPokemon={this.state.currentPokemon}/>
           <div className="pokeMoveList">
            <MovesDisplay moves={this.state.currentPokemon.moves}/>
           </div>

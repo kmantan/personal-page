@@ -3,10 +3,18 @@ import Image from 'next/image'
 import Ditto from './../../../DefaultPokemon.js';
 import TypeDisplay from './TypeDisplay.jsx';
 
-export default function Display({currentPokemon}) {
+export default function Display({allPokemon, currentPokemon, updatePokemon}) {
   currentPokemon = currentPokemon || Ditto;
 
   let image = currentPokemon.sprites.front_default;
+
+  function togglePokemon(direction){
+    allPokemon.map((pokemon) => {
+      if(pokemon.id === currentPokemon.id + direction){
+        updatePokemon((pokemon.name.english).toLowerCase());
+      }
+    })
+  }
 
   if(image){
     return (
@@ -20,6 +28,14 @@ export default function Display({currentPokemon}) {
           <div className="flex flex-row">
           <p className="mr-2">{currentPokemon.types.length > 1 ? 'Types: ' : 'Type: '}</p>
           <TypeDisplay pokemon={currentPokemon}/>
+          </div>
+          <div className="p-2">
+            <button className="rounded-lg p-2" onClick={() => {
+              if(currentPokemon.id >= 2){
+                togglePokemon(-1);
+              }
+            }}>Previous</button>
+            <button className="rounded-lg p-2" onClick={() => togglePokemon(1)}>Next</button>
           </div>
         </div>
       </div>

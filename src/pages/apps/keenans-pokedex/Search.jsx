@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import gsap from 'gsap';
-import AllPokemon from './../../../AllPokemon.js';
 
-export default function Search({updatePokemon}) {
+
+export default function Search({allPokemon, updatePokemon}) {
   let [requestedPokemon, setRequestedPokemon] = useState('');
   let [suggested, setSuggested] = useState([]);
   let currentPosition = 0;
@@ -22,6 +22,7 @@ export default function Search({updatePokemon}) {
 });
 }
   setRequestedPokemon('');
+
   setInterval(animate, 2000)
     updatePokemon(newPokemon);
 
@@ -36,7 +37,7 @@ export default function Search({updatePokemon}) {
         value={requestedPokemon} onChange={(e) => {
           setRequestedPokemon(e.target.value);
 
-          setSuggested(priorSuggested => AllPokemon.filter((search) => {
+          setSuggested(priorSuggested => allPokemon.filter((search) => {
             if((search.name.english).toLowerCase().includes((e.target.value).toLowerCase())){
               return search.name.english;
             }
