@@ -19,7 +19,7 @@ export default function Display({allPokemon, currentPokemon, updatePokemon}) {
   if(image){
     return (
       <div className="flex flex-col items-center">
-        <h3>{currentPokemon.name[0].toUpperCase() + currentPokemon.name.slice(1,currentPokemon.name.length)}</h3>
+        <h3 className="text-xl">{currentPokemon.name[0].toUpperCase() + currentPokemon.name.slice(1,currentPokemon.name.length)}</h3>
         <Image className="pokemon" src={image} alt="" width={150} height={150}></Image>
         <div className="flex flex-col">
           <p>Pokemon ID # {currentPokemon.id}</p>
@@ -30,12 +30,13 @@ export default function Display({allPokemon, currentPokemon, updatePokemon}) {
           <TypeDisplay pokemon={currentPokemon}/>
           </div>
           <div className="p-2">
-            <button className="rounded-lg p-2" onClick={() => {
+            <button className="rounded-lg p-2 hover:text-blue-400" onClick={() => {
               if(currentPokemon.id >= 2){
                 togglePokemon(-1);
               }
             }}>Previous</button>
-            <button className="rounded-lg p-2" onClick={() => togglePokemon(1)}>Next</button>
+            <button className="rounded-lg p-2 hover:text-blue-400"
+            onClick={() => togglePokemon(1)}>Next</button>
           </div>
         </div>
       </div>
