@@ -24,6 +24,7 @@ class KeenansPokedex extends React.Component {
     fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`)
     .then(res => res.json())
     .then(pokemonInfo => {
+      console.log(pokemonInfo);
       this.setState({currentPokemon: pokemonInfo, animationComplete: false});
     })
   }
