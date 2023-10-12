@@ -14,7 +14,10 @@ export default function MovesDisplay({moves}){
             if(move.version_group_details[0].move_learn_method.name === 'level-up'){
               return (
                 <tr key={`${name}-row`}>
-                  <td key={name}>{formattedName}</td>
+                  <td key={name}
+                  onClick={(e) => {
+                    console.log("Move: ", move);
+                  }}>{formattedName}</td>
                 </tr>
               )
             }

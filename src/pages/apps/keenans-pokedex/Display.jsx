@@ -6,7 +6,7 @@ import TypeDisplay from './TypeDisplay.jsx';
 export default function Display({allPokemon, currentPokemon, updatePokemon}) {
   currentPokemon = currentPokemon || Ditto;
 
-  let image = currentPokemon.sprites.front_default;
+  let image = "https://projectpokemon.org/images/normal-sprite/" + currentPokemon.name + ".gif";
 
   function togglePokemon(direction){
     allPokemon.map((pokemon) => {
@@ -20,7 +20,7 @@ export default function Display({allPokemon, currentPokemon, updatePokemon}) {
     return (
       <div className="flex flex-col items-center">
         <h3 className="text-xl">{currentPokemon.name[0].toUpperCase() + currentPokemon.name.slice(1,currentPokemon.name.length)}</h3>
-        <Image className="pokemon" src={image} alt="" width={150} height={150}></Image>
+        <img className="pokemon" src={image} alt="" width="100px" height="100px"></img>
         <div className="flex flex-col">
           <p>Pokemon ID # {currentPokemon.id}</p>
           <p>Weight: {Math.round(currentPokemon.weight / 4.535923)}lbs</p>

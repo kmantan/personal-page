@@ -147,6 +147,12 @@ h2 {
   height: 100vh;
 }
 
+.pokemon {
+  height: 100px;
+  width: 100px;
+  margin: 20px;
+}
+
 .pokeMoveList {
   overflow-y: auto;
   height: 60vh;
