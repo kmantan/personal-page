@@ -9,21 +9,21 @@ export default function Search({allPokemon, updatePokemon}) {
 
   function updateSuggested(newPokemon){
     setRequestedPokemon(priorRequest => newPokemon);
-    function animate() {
-      gsap.to(".pokemon", {
-      x: 0, //normal value
-      y: currentPosition - 50,
-      duration: 0.5
-  });
-  gsap.to(".pokemon", {
-    x: 0, //normal value
-    y: currentPosition + 0,
-    duration: 0.5
-});
-}
+//     function animate() {
+//       gsap.to(".pokemon", {
+//       x: 0, //normal value
+//       y: currentPosition - 50,
+//       duration: 0.5
+//   });
+//   gsap.to(".pokemon", {
+//     x: 0, //normal value
+//     y: currentPosition + 0,
+//     duration: 0.5
+// });
+// }
   setRequestedPokemon('');
 
-  setInterval(animate, 2000)
+  // setInterval(animate, 2000)
     updatePokemon(newPokemon);
 
   }
