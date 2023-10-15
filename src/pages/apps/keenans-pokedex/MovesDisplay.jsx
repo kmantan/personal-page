@@ -1,28 +1,34 @@
-import React from 'react';
+import React from "react";
 
-export default function MovesDisplay({moves}){
+export default function MovesDisplay({ moves }) {
   moves = moves || [];
   return (
     <table>
       <tbody>
-      <tr>
-        <th>Moves List</th>
-      </tr>
-          {moves.map((move) => {
-            const name = move.move.name;
-            const formattedName = (name[0]).toUpperCase() + (name).slice(1);
-            if(move.version_group_details[0].move_learn_method.name === 'level-up'){
-              return (
-                <tr key={`${name}-row`}>
-                  <td key={name}
+        <tr>
+          <th>Moves List</th>
+        </tr>
+        {moves.map((move) => {
+          const name = move.move.name;
+          const formattedName = name[0].toUpperCase() + name.slice(1);
+          if (
+            move.version_group_details[0].move_learn_method.name === "level-up"
+          ) {
+            return (
+              <tr key={`${name}-row`}>
+                <td
+                  key={name}
                   onClick={(e) => {
                     console.log("Move: ", move);
-                  }}>{formattedName}</td>
-                </tr>
-              )
-            }
-          })}
+                  }}
+                >
+                  {formattedName}
+                </td>
+              </tr>
+            );
+          }
+        })}
       </tbody>
     </table>
-  )
+  );
 }

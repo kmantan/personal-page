@@ -3,7 +3,7 @@ import Pokedex from "../apps/keenans-pokedex/Pokedex.jsx";
 import HealthCoach from "../apps/my-health-coach/HealthCoach";
 import Atelier from "../apps/atelier/Atelier";
 
-export default function Work(){
+export default function Work() {
   return (
     <div className="work">
       <section className="poke">
@@ -16,5 +16,5 @@ export default function Work(){
         <Atelier />
       </section>
     </div>
-  )
-};
+  );
+}
