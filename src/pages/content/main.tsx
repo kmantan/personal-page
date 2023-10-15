@@ -8,7 +8,7 @@ type MainProps = {
 export default function Main({setCurrent} : MainProps){
   return (
     <div className="flex flex-col justify-center content-center h-full w-full">
-      <h1 className="text-4xl text-center text-m-10 w-100">
+      <h1 className="text-4xl text-center text-m-10 w-100 greeting">
         {`Hi, I'm Keenan Aldridge.`}
         <div className="flex flex-row justify-center align-center">
         <p className="mr-2">I am a</p><p className="text-indigo-600 underline underline-offset-8"
